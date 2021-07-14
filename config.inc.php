@@ -22,10 +22,8 @@ $cfg['blowfish_secret'] = '782FB2C5A2C4E8FC287C2DC37024BB74'; /* YOU MUST FILL I
  */
 $i = 0;
 $hosts =  [
-    ['url' => '127.0.0.1', 'port' => 3306],
-    ['url' => 'rm-wz9634i7441lqj5h2.mysql.rds.aliyuncs.com', 'port' => 3306],
-    ['url' => '112.74.189.114', 'port' => 3306],
-    ['url' => '122.51.86.148', 'port' => 3306],
+    ['verbose' => 'e1', 'url' => '127.0.0.1', 'port' => 3306],
+    ['verbose' => 'e2', 'url' => 'rm-wz9634i7441lqj5h2.mysql.rds.aliyuncs.com', 'port' => 3306],
 ];
 
 foreach ($hosts as $host) {
@@ -33,6 +31,7 @@ foreach ($hosts as $host) {
 
     $cfg['Servers'][$i]['host']             = $host['url'];
     $cfg['Servers'][$i]['port']             = $host['port'];
+    $cfg['Servers'][$i]['verbose']          = $host['verbose'];
     $cfg['Servers'][$i]['auth_type']        = 'cookie';
     $cfg['Servers'][$i]['compress']         = false;
     $cfg['Servers'][$i]['AllowNoPassword']  = false;

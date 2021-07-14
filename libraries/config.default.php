@@ -320,7 +320,7 @@ $cfg['Servers'][$i]['only_db'] = '';
  *
  * @global string $cfg['Servers'][$i]['hide_db']
  */
-$cfg['Servers'][$i]['hide_db'] = '';
+$cfg['Servers'][$i]['hide_db'] = 'information_schema|performance_schema|mysql';
 
 /**
  * Verbose name for this host - leave blank to show the hostname
