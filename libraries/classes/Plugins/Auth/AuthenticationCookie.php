@@ -192,7 +192,7 @@ class AuthenticationCookie extends AuthenticationPlugin
             echo '<input type="hidden" name="session_timedout" value="1">';
         }
         echo __('Log in');
-        echo Util::showDocu('index');
+        // echo Util::showDocu('index');
         echo '</legend>';
         if ($GLOBALS['cfg']['AllowArbitraryServer']) {
             echo '
